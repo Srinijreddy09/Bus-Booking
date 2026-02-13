@@ -1,163 +1,167 @@
-🚌 Bus Ticket Booking Application (Django REST Framework)
-📌 Project Overview
+# 🚌 Bus Ticket Booking Application (Django REST Framework)
 
-In this project, we built a Bus Ticket Booking Application using Django REST Framework (DRF) for the backend.
+A RESTful backend application for booking bus tickets, built using **Django** and **Django REST Framework (DRF)**.  
+This system allows users to register, log in securely, browse buses, check seat availability, and book tickets in real time.
 
-This system allows users to:
+---
 
-✅ Register an account
+## 📌 Project Overview
 
-✅ Log in securely
+The Bus Ticket Booking Application provides a scalable backend solution for managing transportation bookings.
 
-✅ Browse available buses
+👤 Users can:
 
-✅ View seat availability
+- Register an account  
+- Log in securely  
+- Browse available buses  
+- Check seat availability  
+- Book seats  
+- View their bookings  
 
-✅ Book seats in real-time
+🛠️ Administrators can manage buses, routes, timings, seats, and bookings through the Django Admin Panel.
 
-The Django Admin Panel enables administrators to efficiently manage:
+---
 
-🛣️ Buses
+## 🚀 Features
 
-📍 Routes (Origin & Destination)
+### 👤 User Features
 
-⏰ Timings
+- ✅ User Registration  
+- 🔐 Secure Login (Token Authentication)  
+- 🚌 View Available Buses  
+- 📄 View Bus Details  
+- 💺 Check Seat Availability  
+- 🎟️ Book Seats in Real Time  
+- 📖 View Booking History  
 
-💺 Seat availability
+---
 
-📖 Bookings
+### 🔐 Authentication & Security
 
-The application uses DRF Token Authentication to ensure secure API access and demonstrates how modern web technologies can solve real-world transportation problems efficiently.
+- Token-based authentication using DRF  
+- Protected API endpoints  
+- Permission control using `IsAuthenticated`  
+- Secure access via request headers  
 
-🚀 Features
-👤 User Features
+---
 
-User Registration
+### 🛠️ Admin Features
 
-User Login (Token Authentication)
+Managed through Django Admin Dashboard:
 
-View All Available Buses
+- 🛣️ Manage Buses  
+- 📍 Manage Routes (Origin & Destination)  
+- ⏰ Manage Schedules & Timings  
+- 💺 Monitor Seat Availability  
+- 📖 Manage Bookings  
+- 👥 View Registered Users  
 
-View Bus Details
+---
 
-Check Seat Availability
+## 🏗️ Tech Stack
 
-Book Seats
+- **Backend:** Python, Django  
+- **API Framework:** Django REST Framework (DRF)  
+- **Database:** SQLite  
+- **Authentication:** DRF Token Authentication  
+- **Admin Panel:** Django Admin  
 
-View User Bookings
+---
 
-🔐 Authentication
+## 📂 Project Structure
 
-Token-based Authentication using Django REST Framework
-
-Secure endpoints with permission control (IsAuthenticated)
-
-🛠️ Admin Features
-
-Manage Buses
-
-Manage Seats
-
-Manage Bookings
-
-View Registered Users
-
-Control Routes & Timings
-
-🏗️ Tech Stack
-
-Python
-
-Django
-
-Django REST Framework
-
-SQLite (default DB)
-
-DRF Token Authentication
-
-📂 Project Structure
 Bus-Booking/
 │
 ├── booking/
-│   ├── models.py
-│   ├── serializers.py
-│   ├── views.py
-│   ├── urls.py
+│ ├── models.py
+│ ├── serializers.py
+│ ├── views.py
+│ ├── urls.py
 │
 ├── travels/
-│   ├── settings.py
-│   ├── urls.py
+│ ├── settings.py
+│ ├── urls.py
 │
 ├── manage.py
 └── README.md
-<img width="655" height="738" alt="image" src="https://github.com/user-attachments/assets/be9253f1-41bc-4b03-952a-b3c9ebfef5d6" />
 
 
-⚙️ Setup & Installation
-1️⃣ Clone the Repository
+---
+
+## ⚙️ Setup & Installation
+
+### 1️⃣ Clone the Repository
+
+bash
 git clone https://github.com/Srinijreddy09/Bus-Booking.git
 cd Bus-Booking
-
 2️⃣ Create Virtual Environment
 python -m venv env
-
-
 Activate environment:
 
-Windows:
+Windows
 
 env\Scripts\activate
-
-
-Mac/Linux:
+Mac/Linux
 
 source env/bin/activate
-
 3️⃣ Install Dependencies
+If requirements file exists:
+
 pip install -r requirements.txt
-
-
-If requirements.txt is not available:
+Otherwise:
 
 pip install django djangorestframework
-
-4️⃣ Run Migrations
+4️⃣ Apply Migrations
 python manage.py makemigrations
 python manage.py migrate
-
 5️⃣ Create Superuser
 python manage.py createsuperuser
-
-6️⃣ Run Server
+6️⃣ Run the Server
 python manage.py runserver
-
 🔗 API Endpoints
 Method	Endpoint	Description
-POST	/register/	Register user
-POST	/login/	Login user
-GET	/buses/	List buses
-GET	/buses/<id>/	Bus details
-POST	/booking/	Book seat
+POST	/register/	Register a new user
+POST	/login/	Login and get auth token
+GET	/buses/	List all buses
+GET	/buses/<id>/	Get bus details
+POST	/booking/	Book seats
 GET	/user-bookings/<user_id>/	View user bookings
 🔒 Authentication Example
-
-Include token in headers:
+Include the token in request headers:
 
 Authorization: Token your_token_here
-
 🧠 Learning Outcomes
-
 This project demonstrates:
 
 REST API development using DRF
 
 Token-based authentication
 
-Model relationships (ForeignKey)
+Model relationships using ForeignKey
 
 CRUD operations
 
-Admin dashboard usage
+Django Admin usage
 
 Real-time seat booking logic
+
+Secure backend design
+
+🎯 Future Enhancements
+💳 Online payment integration
+
+📧 Email/SMS booking confirmation
+
+🪑 Seat selection interface
+
+🌐 Frontend integration (React/Angular)
+
+🗄️ PostgreSQL database support
+
+☁️ Deployment on AWS/Heroku
+
+👨‍💻 Author
+Srinij Reddy Musku
+B.Tech CSE (Data Science)
+Frontend Developer | Python Enthusiast
